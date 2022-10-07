@@ -1,0 +1,103 @@
+.menu {
+	display: none;
+	background-color: $second-color;
+	background-image: url("../img/home/home-bg.jpg");
+	background-repeat: repeat;
+	background-position: top center;
+	position: fixed;
+	top: 0;
+	left: 0;
+	z-index: 50;
+	width: 100%;
+	height: 100%;
+	transition: all 0.5s;
+	left: -100%;
+	overflow: auto;
+	@media (max-width: 768px) {
+		display: block;
+	}
+	&_active {
+		left: 0;
+	}
+	& ul {
+		padding: 100px 10px;
+		max-width: 100%;
+		list-style: none;
+		& li {
+			margin-bottom: 20px;
+			transition: all 0.5s;
+		}
+		& a {
+			display: block;
+			text-transform: uppercase;
+			@include second-font;
+			color: $text-color;
+			font-size: 40px;
+			font-weight: 700;
+			width: 100%;
+			text-transform: uppercase;
+			letter-spacing: 4.17px;
+			-webkit-transition: all 0.2s;
+			transition: all 0.2s;
+			padding: 5px 20px;
+			&:hover {
+				text-decoration: none;
+				background-color: $main-color;
+				color: $second-color;
+				transition: all 0.3s;
+			}
+			&:active {
+				-webkit-transition: all 0.3s;
+				transition: all 0.3s;
+				font-size: 38px;
+			}
+		}
+	}
+	&-link {
+		z-index: 51;
+		display: none;
+		width: 50px;
+		height: 50px;
+		position: fixed;
+		top: 10px;
+		left: 10px;
+		transition: ease 0.2s;
+		@media (max-width: 768px) {
+			display: block;
+		}
+		& span,
+		& span::after,
+		& span::before {
+			display: block;
+			height: 5px;
+			width: 100%;
+			background-color: #68411a;
+			box-shadow: 0px 2px 0 #fee8bc;
+			position: absolute;
+			top: 50%;
+			transition: all 0.2s;
+		}
+		& span::before {
+			content: "";
+			margin-top: -15px;
+		}
+		& span::after {
+			content: "";
+			margin-top: 11px;
+		}
+		&_active span {
+			background-color: transparent;
+			box-shadow: none;
+			&::before {
+				-webkit-transform: rotate(-135deg);
+				transform: rotate(-135deg);
+				margin-top: 0;
+			}
+			&::after {
+				-webkit-transform: rotate(135deg);
+				transform: rotate(135deg);
+				margin-top: 0;
+			}
+		}
+	}
+}

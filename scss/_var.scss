@@ -1,0 +1,30 @@
+$main-color: #bf2222;
+$second-color: #ffc045;
+$text-color: #42200b;
+$c: center;
+$s: space-between;
+$a: space-around;
+@import url("https://fonts.googleapis.com/css?family=Alfa+Slab+One|Bebas+Neue|Montserrat:400,700&display=swap");
+
+@mixin main-font {
+	font-family: "Alfa Slab One", cursive;
+}
+@mixin second-font {
+	font-family: "Bebas Neue", cursive;
+}
+
+			@mixin desc-font {
+			font-family: "Montserrat", sans-serif;
+}
+
+@mixin flex($justify) {
+	display: flex;
+	justify-content: $justify;
+	font-size: 0;
+}
+
+@mixin cont($width) {
+	margin: 0 auto;
+	max-width: $width + px;
+}
+
