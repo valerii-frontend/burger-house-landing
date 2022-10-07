@@ -14,6 +14,7 @@ Convert Figma layout to responsive static template
 - Responsive Web Design
 - Jquery
 - Slick slider
+- Gulp js
 
 # Preview
 
